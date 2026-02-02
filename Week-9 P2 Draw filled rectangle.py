@@ -1,0 +1,25 @@
+# Week 9 - Program 2 # Draw Filled Rectangle
+
+import turtle
+turtle.setup(500, 500)
+board = turtle.Turtle()
+def draw_filled_rectangle(board, x, y, width, height, size, color, fill):
+    board.fillcolor(fill)
+    board.pencolor(color)
+    board.pensize(size)
+    board.setheading(0)
+    board.begin_fill()
+    board.up()
+    board.goto(x, y)
+    board.down()
+    board.forward(width)
+    board.right(90)
+    board.forward(height)
+    board.right(90)
+    board.forward(width)
+    board.right(90)
+    board.forward(height)
+    board.end_fill()
+draw_filled_rectangle(board, -100, 50, 200, 100, 5, "blue", "green")
+board.hideturtle()
+turtle.done()
